@@ -31,6 +31,15 @@ body{
     max-width: 40vw;
 }
 
+.icon{
+    width: 15vh;
+    height: 15vh;
+}
+
+.border{
+    border: 0.5vh solid !important;
+}
+
 @-webkit-keyframes colorchange {
     0% {
         color: black;
