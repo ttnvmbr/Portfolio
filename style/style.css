@@ -21,6 +21,15 @@ body{
     transform: scale(2);
 }
 
+.nodecolink2{
+    text-decoration: none;
+    color: white;
+}
+
+.nodecolink2:hover{
+    color:white;
+}
+
 .container{
     height: 100vh !important;
     width: 100vw !important;
@@ -73,5 +82,11 @@ body{
     }
     100% {
         color: white;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    body{
+        overflow: scroll;
     }
 }
