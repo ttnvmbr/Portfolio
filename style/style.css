@@ -14,19 +14,19 @@ body{
 
 .typewriter{
     overflow: hidden; 
-    border-right: .15em solid white; 
+    border-right: .15em solid transparent; 
     white-space: nowrap;
     margin: 0 auto; 
     letter-spacing: .15em; 
     animation: 
       typing 3.5s steps(40, end),
-      blink-caret .75s step-end infinite;
+      blink-caret .75s step-end 5;
   }
   
   /* typing effect */
   @keyframes typing {
     from { width: 0 }
-    to { width: 95% }
+    to { width: 100% }
   }
   
   /* cursor effect */
@@ -43,6 +43,7 @@ body{
 .nodecolink:hover{
     color: white;
     transform: scale(2);
+
 }
 
 .nodecolink2{
