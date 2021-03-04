@@ -55,11 +55,6 @@ body{
     color:white;
 }
 
-.container{
-    height: 100vh !important;
-    width: 100vw !important;
-}
-
 .image{
     height: auto;
     max-width: 40vw;
@@ -142,7 +137,7 @@ body{
 
 @media only screen and (max-width: 768px) {
     body{
-        overflow: scroll;
+        overflow-y: scroll;
         font-size: 1em;
     }
     .w-75{
@@ -153,6 +148,16 @@ body{
         opacity: 0.8;
       }
 
+    .typewriter{
+        font-size: 1em !important;
+        animation: 
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end 5;
+    }
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 80% }
+      }
     .text{
         font-size: 0.5em;
     }
