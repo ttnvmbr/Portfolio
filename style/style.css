@@ -1,16 +1,38 @@
-body{
-    background-color: black !important;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.3em;
-    overflow: hidden;
+body {
+    margin: 0;
+    height: 100vh;
+    font-weight: 100;
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    color: white;
+    background: linear-gradient(white, black);
+    background-repeat: no-repeat;
+    background-color: black;
+    font-size: 1.2em;
+}
+
+/* invisible scrollbar */
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+.container-fluid{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
 }
 
 .orbitron{
     font-family: 'Orbitron', sans-serif;
     -webkit-animation: colorchange 15s infinite alternate;
     font-size: 3.5em;
+    color: white;
+    text-shadow: 0.05em 0.05em black;
 }
 
 .typewriter{
@@ -20,39 +42,224 @@ body{
     margin: 0 auto; 
     letter-spacing: .15em; 
     animation: 
-      typing 3.5s steps(40, end),
-      blink-caret .75s step-end 5;
-  }
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end 5;
+}
   
   /* typing effect */
-  @keyframes typing {
+@keyframes typing {
     from { width: 0 }
     to { width: 100% }
-  }
+}
   
   /* cursor effect */
-  @keyframes blink-caret {
+@keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: white; }
-  }
-  
+}
+
+.arrow{
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.arrow span{
+	display: block;
+	width: 20px;
+	height: 20px;
+	border-bottom: 2px solid white;
+	border-right: 2px solid white;
+	transform: rotate(45deg);
+	margin: -10px;
+	animation: animate 2s infinite;
+}
+
+.arrow span:nth-child(2)
+{
+	animation-delay: -0.2s;
+}
+
+.arrow span:nth-child(3)
+{
+	animation-delay: -0.4s;
+}
+
+@keyframes animate{
+	
+	0%{
+		opacity: 0;
+		transform: rotate(45deg) translate(-20px, -20px);
+	}
+	50%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+		transform: rotate(45deg) translate(20px, 20px);
+	}
+}
+
+/* background */
+
+.light {
+    position: absolute;
+    width: 0px;
+    opacity: .75;
+    background-color: white;
+    box-shadow: #e9f1f1 0px 0px 20px 2px;
+    opacity: 0;
+    top: 100vh;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+}
+
+.x1{
+    -webkit-animation: floatUp 4s infinite linear;
+    -moz-animation: floatUp 4s infinite linear;
+    -o-animation: floatUp 4s infinite linear;
+    animation: floatUp 4s infinite linear;
+    -webkit-transform: scale(1.0);
+    -moz-transform: scale(1.0);
+    -o-transform: scale(1.0);
+    transform: scale(1.0);
+}
+
+.x2{
+    -webkit-animation: floatUp 7s infinite linear;
+    -moz-animation: floatUp 7s infinite linear;
+    -o-animation: floatUp 7s infinite linear;
+    animation: floatUp 7s infinite linear;
+    -webkit-transform: scale(1.6);
+    -moz-transform: scale(1.6);
+    -o-transform: scale(1.6);
+    transform: scale(1.6);
+    left: 15%;
+}
+
+.x3{
+    -webkit-animation: floatUp 2.5s infinite linear;
+    -moz-animation: floatUp 2.5s infinite linear;
+    -o-animation: floatUp 2.5s infinite linear;
+    animation: floatUp 2.5s infinite linear;
+    -webkit-transform: scale(.5);
+    -moz-transform: scale(.5);
+    -o-transform: scale(.5);
+    transform: scale(.5);
+    left: -15%;
+}
+
+.x4{
+    -webkit-animation: floatUp 4.5s infinite linear;
+    -moz-animation: floatUp 4.5s infinite linear;
+    -o-animation: floatUp 4.5s infinite linear;
+    animation: floatUp 4.5s infinite linear;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+    left: -34%;
+}
+
+.x5{
+    -webkit-animation: floatUp 8s infinite linear;
+    -moz-animation: floatUp 8s infinite linear;
+    -o-animation: floatUp 8s infinite linear;
+    animation: floatUp 8s infinite linear;
+    -webkit-transform: scale(2.2);
+    -moz-transform: scale(2.2);
+    -o-transform: scale(2.2);
+    transform: scale(2.2);
+    left: -57%;
+}
+
+.x6{
+    -webkit-animation: floatUp 3s infinite linear;
+    -moz-animation: floatUp 3s infinite linear;
+    -o-animation: floatUp 3s infinite linear;
+    animation: floatUp 3s infinite linear;
+    -webkit-transform: scale(.8);
+    -moz-transform: scale(.8);
+    -o-transform: scale(.8);
+    transform: scale(.8);
+    left: -81%;
+}
+
+.x7{
+    -webkit-animation: floatUp 5.3s infinite linear;
+    -moz-animation: floatUp 5.3s infinite linear;
+    -o-animation: floatUp 5.3s infinite linear;
+    animation: floatUp 5.3s infinite linear;
+    -webkit-transform: scale(3.2);
+    -moz-transform: scale(3.2);
+    -o-transform: scale(3.2);
+    transform: scale(3.2);
+    left: 37%;
+}
+
+.x8{
+    -webkit-animation: floatUp 4.7s infinite linear;
+    -moz-animation: floatUp 4.7s infinite linear;
+    -o-animation: floatUp 4.7s infinite linear;
+    animation: floatUp 4.7s infinite linear;
+    -webkit-transform: scale(1.7);
+    -moz-transform: scale(1.7);
+    -o-transform: scale(1.7);
+    transform: scale(1.7);
+    left: 62%;
+}
+
+.x9{
+    -webkit-animation: floatUp 4.1s infinite linear;
+    -moz-animation: floatUp 4.1s infinite linear;
+    -o-animation: floatUp 4.1s infinite linear;
+    animation: floatUp 4.1s infinite linear;
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    transform: scale(0.9);
+    left: 85%;
+}
+
+
+@-webkit-keyframes floatUp{
+    0%{top: 100vh; opacity: 0;}
+    25%{opacity: 1;}
+    50%{top: 0vh; opacity: .8;}
+    75%{opacity: 1;}
+    100%{top: -100vh; opacity: 0;}
+}
+@-moz-keyframes floatUp{
+    0%{top: 100vh; opacity: 0;}
+    25%{opacity: 1;}
+    50%{top: 0vh; opacity: .8;}
+    75%{opacity: 1;}
+    100%{top: -100vh; opacity: 0;}
+}
+@-o-keyframes floatUp{
+    0%{top: 100vh; opacity: 0;}
+    25%{opacity: 1;}
+    50%{top: 0vh; opacity: .8;}
+    75%{opacity: 1;}
+    100%{top: -100vh; opacity: 0;}
+}
+@keyframes floatUp{
+    0%{top: 100vh; opacity: 0;}
+    25%{opacity: 1;}
+    50%{top: 0vh; opacity: .8;}
+    75%{opacity: 1;}
+    100%{top: -100vh; opacity: 0;}
+}
+
+
 .nodecolink{
     text-decoration: none;
     color: white;
 }
 
 .nodecolink:hover{
-    color: white;
-    transform: scale(2);
-
-}
-
-.nodecolink2{
-    text-decoration: none;
-    color: white;
-}
-
-.nodecolink2:hover{
     color:white;
 }
 
@@ -70,6 +277,10 @@ body{
     border: 0.5vh solid !important;
 }
 
+.project-item{
+    position: relative;
+}
+
 .overlay {
     position: absolute;
     top: 0;
@@ -83,12 +294,12 @@ body{
     background-color: black;
   }
   
-  .carousel-item:hover .overlay {
+  .project-item:hover .overlay {
     opacity: 0.8;
   }
   .text {
     color: white;
-    font-size: 1em;
+    font-size: 0.6em;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -97,52 +308,12 @@ body{
     transform: translate(-50%, -50%);
     text-align: center;
   }
-  
 
-
-@-webkit-keyframes colorchange {
-    0% {
-        color: black;
-    }
-    10% {
-        color: #80e8c7;
-    }
-    20% {
-        color: #ba7be0;
-    }
-    30% {
-        color: #db8fc8;
-    }
-    40% {
-        color:#9529ab;
-    }
-    50% {
-        color: #eba652;
-    }
-    60% {
-        color: #edd861;
-    }
-    70% {
-        color: #2cbf6e;
-    }
-    80% {
-        color: #34ccd1;
-    }
-    90% {
-        color: #c43945;
-    }
-    100% {
-        color: white;
-    }
-}
 
 @media only screen and (max-width: 768px) {
     body{
         overflow-y: scroll;
         font-size: 1em;
-    }
-    .w-75{
-        width: 100% !important;
     }
 
     .overlay {
@@ -150,22 +321,17 @@ body{
       }
 
     .typewriter{
-        font-size: 1em !important;
+        font-size: 1.2em !important;
         animation: 
         typing 3.5s steps(40, end),
         blink-caret .75s step-end 5;
     }
-    @keyframes typing {
-        from { width: 0 }
-        to { width: 80% }
-      }
+    
+    .flex-row{
+        flex-direction: column !important;
+    }
     .text{
-        font-size: 0.5em;
-    }
-    .carousel-dark .carousel-indicators [data-bs-target]{
-        background-color: white;
-    }
-    .carousel-dark .carousel-control-next-icon, .carousel-dark .carousel-control-prev-icon {
-        filter:none;
+        font-size: 0.6em;
     }
 }
+
