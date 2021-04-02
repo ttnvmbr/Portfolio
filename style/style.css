@@ -29,7 +29,6 @@ body {
 
 .orbitron{
     font-family: 'Orbitron', sans-serif;
-    -webkit-animation: colorchange 15s infinite alternate;
     font-size: 3.5em;
     color: white;
     text-shadow: 0.05em 0.05em black;
