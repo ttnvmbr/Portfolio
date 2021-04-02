@@ -79,7 +79,7 @@
             <p class="display-4 mb-0">Projecten</p>
             <small class="text-muted">Klik op een project om de code of website te bezichtigen.</small>
 
-            <div class="row justify-content-center g-4 mb-4 mt-4">
+            <div class="row justify-content-center g-4 mb-4 mt-2">
                 <div class="project-item col-lg-4">
                     <a href="https://github.com/ttnvmbr/CoConnect">
                         <img src="images/coconnect.jpg" class="img-fluid" alt="Co-Connect app">
@@ -115,7 +115,32 @@
                     </a>
                 </div>
             </div>
-            
+
+            <div class="collapse" id="collapseProjects">
+                <div class="mt-4">
+                    <div class="row justify-content-center g-4">
+                        <div class="project-item col-lg-4">
+                            <a href="https://github.com/ttnvmbr/Divorce-prediction-ML5">
+                                <img src="images/divorcepredicition.jpg" class="img-fluid" alt="Divorce prediction">
+                                <div class="overlay">
+                                    <p class="text">Divorce prediction. Een test van drie vragen die voorspelt of jouw relatie stand houdt.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="project-item col-lg-4">
+                            <a href="">
+                                <img src="images/scheidprullenbak.jpg" class="img-fluid" alt="Scheid prullenbak">
+                                <div class="overlay">
+                                    <p class="text">De scheid prullenbak. Een zelfscheidende kleinvuil-prullenbak met AI, die de gebruiker laat weten onder welke categorie het weggegooide afval valt. Nog in ontwikkeling.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="my-2">
+              <a class="nodecolink text-muted" data-bs-toggle="collapse" href="#collapseProjects" id="collapseLink" onclick="hideMore()"role="button" aria-expanded="false" aria-controls="collapseProjects">Toon meer</a>
+            </div>
         </div>
     </div>
     
@@ -141,5 +166,14 @@
    </div>
 
 </body>
+<script>
+function hideMore(){
+    let link = document.getElementById('collapseLink')
+        if(link.innerHTML==="Toon meer"){
+            link.innerHTML="Toon minder"
+        }else{
+            link.innerHTML="Toon meer"
+        }
+}</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 </html>
