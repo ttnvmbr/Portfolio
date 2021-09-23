@@ -103,6 +103,19 @@ body {
   }
 }
 
+@-webkit-keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
+}
 /* background */
 
 .light {
@@ -470,6 +483,24 @@ body {
 /* Animation ============================================================*/
 
 @keyframes rotationBox {
+  0% {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+  25% {
+    transform: rotate3d(0, 1, 1, 90deg);
+  }
+  50% {
+    transform: rotate3d(1, 0, 1, 180deg);
+  }
+  75% {
+    transform: rotate3d(1, 1, 0, 240deg);
+  }
+  100% {
+    transform: rotate3d(1, 1, 1, 360deg);
+  }
+}
+
+@-webkit-keyframes rotationBox {
   0% {
     transform: rotate3d(0, 0, 0, 0deg);
   }
