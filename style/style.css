@@ -380,6 +380,7 @@ body {
 /* Note: rotationBox keyframes is placed right at the end */
 .cube__container {
   animation: rotationBox 20s linear infinite forwards;
+  -webkit-animation: rotationBox 20s linear infinite forwards;
   height: 100%;
   transform: translateZ(-5rem);
   transform-style: preserve-3d;
